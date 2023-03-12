@@ -29,7 +29,7 @@
 По желанию можете поэкспериментировать с опциями: https://nmap.org/man/ru/man-briefoptions.html.
 
 
-##В логах это никак не отразилость, потому что не сервисы не настроены.
+## В логах это никак не отразилость, потому что не сервисы не настроены.
 
 ------
 
@@ -52,9 +52,9 @@
 -  найти секцию **ssh**,
 -  установить **enabled**  в **true**.
 
-##В логах suricata опять же без изменений, а в /var/log/fail2ban.log появилась запись, попытках подключения по ssh и последующим за ним баном
+## В логах suricata опять же без изменений, а в /var/log/fail2ban.log появилась запись, попытках подключения по ssh и последующим за ним баном
 
-###/var/log/auth.log
+### /var/log/auth.log
 ```
 Mar 12 22:13:12 debian1 sshd[8155]: Failed password for invalid user admin1 from 192.168.0.134 port 35556 ssh2
 Mar 12 22:13:12 debian1 sshd[8124]: Failed password for test from 192.168.0.134 port 35402 ssh2
