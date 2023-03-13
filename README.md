@@ -29,7 +29,20 @@
 По желанию можете поэкспериментировать с опциями: https://nmap.org/man/ru/man-briefoptions.html.
 
 
-## В логах это никак не отразилость, потому что не сервисы не настроены.
+## Пришлось изменить путь в suricata.yaml для suricata.rules, потому что он оказался в /var/lib/suricata/rules, и показывает что машину скинуруют nmap с разными ключами.
+
+/var/log/suricata/fast.log
+
+```
+03/13/2023-20:12:39.845651  [**] [1:2009358:6] ET SCAN Nmap Scripting Engine User-Agent Detected (Nmap Scripting Engine) [**] [Classification: Web Application Attack] [Priority: 1] {TCP} 192.168.0.135:55138 -> 192.168.0.133:80
+03/13/2023-20:12:39.845651  [**] [1:2024364:4] ET SCAN Possible Nmap User-Agent Observed [**] [Classification: Web Application Attack] [Priority: 1] {TCP} 192.168.0.135:55138 -> 192.168.0.133:80
+03/13/2023-20:14:35.966916  [**] [1:2010939:3] ET SCAN Suspicious inbound to PostgreSQL port 5432 [**] [Classification: Potentially Bad Traffic] [Priority: 2] {TCP} 192.168.0.135:50064 -> 192.168.0.133:5432
+03/13/2023-20:14:35.966914  [**] [1:2010939:3] ET SCAN Suspicious inbound to PostgreSQL port 5432 [**] [Classification: Potentially Bad Traffic] [Priority: 2] {TCP} 192.168.0.135:50064 -> 192.168.0.133:5432
+03/13/2023-20:14:34.450671  [**] [1:2010935:3] ET SCAN Suspicious inbound to MSSQL port 1433 [**] [Classification: Potentially Bad Traffic] [Priority: 2] {TCP} 192.168.0.135:50063 -> 192.168.0.133:1433
+03/13/2023-20:14:34.450672  [**] [1:2010935:3] ET SCAN Suspicious inbound to MSSQL port 1433 [**] [Classification: Potentially Bad Traffic] [Priority: 2] {TCP} 192.168.0.135:50063 -> 192.168.0.133:1433
+03/13/2023-20:14:14.686837  [**] [1:2024364:4] ET SCAN Possible Nmap User-Agent Observed [**] [Classification: Web Application Attack] [Priority: 1] {TCP} 192.168.0.135:35284 -> 192.168.0.133:80
+03/13/2023-20:14:14.685872  [**] [1:2009358:6] ET SCAN Nmap Scripting Engine User-Agent Detected (Nmap Scripting Engine) [**] [Classification: Web Application Attack] [Priority: 1] {TCP} 192.168.0.135:35268 -> 192.168.0.133:80
+```
 
 ------
 
