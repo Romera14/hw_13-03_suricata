@@ -29,7 +29,7 @@
 По желанию можете поэкспериментировать с опциями: https://nmap.org/man/ru/man-briefoptions.html.
 
 
-## Пришлось изменить путь в suricata.yaml для suricata.rules, потому что он оказался в /var/lib/suricata/rules, и показывает что машину скинуруют nmap с разными ключами.
+## Пришлось изменить путь в suricata.yaml для suricata.rules, потому что он оказался в /var/lib/suricata/rules. Теперь /var/log/suricata/fast.log показывает что машину скинуруют nmap с разными ключами.
 
 /var/log/suricata/fast.log
 
